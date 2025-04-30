@@ -4,4 +4,7 @@ Este proyecto es una calculadora de operaciones matemáticas desarrollada en Jav
 
 ## 📁 Estructura del Proyecto
 
-![Captura de pantalla 2025-04-29 195903](https://github.com/user-attachments/assets/6971eefa-0364-419c-ba4f-b633ebee6aba)
+![image](https://github.com/user-attachments/assets/bd8bb9cf-08b0-4d84-ac67-b9fdcfc52295)
+
+> Implementación de una Calculadora en Java para Actividad 1 del curso JAVA DEVELOPER-20 KODIGO - INCAF
+
