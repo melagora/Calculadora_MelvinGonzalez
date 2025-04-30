@@ -4,4 +4,4 @@ Este proyecto es una calculadora de operaciones matemáticas desarrollada en Jav
 
 ## 📁 Estructura del Proyecto
 
-CalculadoraPOO/ ├── src/ │ ├── Main.java // Clase principal con la lógica de ejecución │ ├── Calculadora.java // Contiene los métodos para las operaciones │ ├── Operacion.java // Representa una operación matemática │ └── Numero.java // Representa un número real como objeto └── README.md
+![Captura de pantalla 2025-04-29 195903](https://github.com/user-attachments/assets/6971eefa-0364-419c-ba4f-b633ebee6aba)
