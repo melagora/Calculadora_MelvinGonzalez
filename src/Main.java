@@ -24,11 +24,15 @@ public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         Calculadora calculadora = new Calculadora();
+
         System.out.println("");
         System.out.println("Bienvenido a la calculadora de operaciones matemáticas.");
-        System.out.println("Por favor, seleccione una operación a realizar.");
 
+        // Bucle principal que permite seguir operando hasta que se elija la opción
+        // "Salir"
         while (true) {
+            // Menú de operaciones disponibles
+            System.out.println("\nPor favor, seleccione una operación a realizar.");
             System.out.println("\n1. Suma");
             System.out.println("2. Resta");
             System.out.println("3. Multiplicación");
@@ -41,17 +45,21 @@ public class Main {
             int opcion;
 
             try {
+                // Se intenta leer la opción ingresada
                 opcion = Integer.parseInt(scanner.nextLine());
 
                 if (opcion == 7) {
+                    // Si elige salir, se finaliza el programa
                     System.out.println("\nSaliendo de la calculadora...");
                     break;
                 }
 
+                // Se declaran variables para la operación y los números involucrados
                 Operacion operacion = new Operacion("ninguna");
                 Numero n1, n2;
                 double resultado;
 
+                // Se selecciona la operación correspondiente
                 switch (opcion) {
                     case 1:
                         operacion = new Operacion("suma");
@@ -89,26 +97,37 @@ public class Main {
                         resultado = calculadora.raizCuadrada(n1);
                         break;
                     default:
+                        // Si la opción no es válida, se notifica al usuario
                         System.out.println("Opción no válida.");
                         continue;
                 }
+
+                // Se muestran el tipo de operación y su resultado
                 System.out.println("");
                 System.out.println("Operación seleccionada: " + operacion.getNombre());
                 System.out.println("Resultado: " + resultado);
 
             } catch (NumberFormatException e) {
+                // Manejo de error si se ingresa texto u otro valor no numérico
                 System.out.println("Error: Ingrese solo números válidos.");
             } catch (InputMismatchException e) {
+                // Manejo de error por mal uso del scanner
                 System.out.println("Error: Formato inválido de entrada.");
-                scanner.nextLine(); // Limpiar buffer
+                scanner.nextLine(); // Limpiar el buffer para evitar bucle infinito
             } catch (ArithmeticException | UnsupportedOperationException e) {
+                // Errores matemáticos o de operaciones no soportadas
                 System.out.println("Error: " + e.getMessage());
             }
         }
 
+        // Se cierra el scanner al finalizar
         scanner.close();
     }
 
+    /**
+     * Solicita al usuario un número real (double) y repite hasta que la entrada sea
+     * válida.
+     */
     private static double pedirNumero(Scanner scanner, String mensaje) {
         while (true) {
             try {
